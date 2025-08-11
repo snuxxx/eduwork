@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .container {
+        border: 3px solid rgba(128, 128, 128, 0.4);
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0px 10px;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid black;
+      }
+      .nav-button {
+        display: flex;
+        gap: 20px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0px 20px 0px;
+        border-bottom: 2px solid black;
+      }
+      .foto-kanan {
+        width: 600px;
+        height: 400px;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .image-title {
+        font-size: 100px;
+        font-weight: bold;
+        color: rgba(128, 128, 128, 0.4);
+      }
+      .about-me {
+        padding: 10px 0px;
+        border-bottom: 2px solid black;
+        place-items: center;
+      }
+      .introduction {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0px;
+      }
+      .introduction-title {
+        background-color: lightgray;
+        padding: 10px;
+        text-align: center;
+        padding: 20px;
+      }
+      .portfolio {
+        padding: 10px 0px;
+        place-items: center;
+      }
+      .portfolio-menu {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+      .portfolio-card {
+        width: 400px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0px;
+      }
+      .image-card {
+        width: 350px;
+        height: 200px;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .text-card {
+        padding: 5px;
+      }
+      .text-card h5 {
+        margin: 0;
+        font-size: 18px;
+        text-align: center;
+      }
+      .card-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: rgba(128, 128, 128, 0.7);
+      }
+      a {
+      text-decoration: none;
+      color: black;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <p>Brand</p>
+        <div class="nav-button">
+          <a href="#">Header</a>
+          <a href="#">Biodata</a>
+          <a href="#">Portfolio</a>
+        </div>
+      </div>
+
+      <div class="header">
+        <div class="kiri">
+          <h1 style="margin: 0;">Selamat Datang di Website Saya</h1>
+          <p>
+            Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks
+            seperti ini
+          </p>
+          <button>Pelajari lebih lanjut</button>
+        </div>
+        <div class="kanan">
+          <div class="foto-kanan">
+            <p class="image-title">600 x 400</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-me">
+        <h1>About Me</h1>
+        <p>A brief introduction about myself</p>
+        <div class="introduction">
+          <div class="introduction-title">Full Name</div>
+          <div class="introduction-title">Education</div>
+          <div class="introduction-title">Pekerjaan</div>
+          <div class="introduction-title">Contact</div>
+          <div class="introduction-title">Hobi</div>
+          <div class="introduction-title">Alamat</div>
+        </div>
+      </div>
+
+      <div class="portfolio">
+        <h1>Portfolio</h1>
+        <div class="portfolio-menu">
+          <div class="portfolio-card">
+            <div class="image-card">
+              <p class="card-title">350 x 200</p>
+            </div>
+            <div class="text-card">
+              <h5>Proyek 1</h5>
+              <p>Deskripsi proyek</p>
+            </div>
+          </div>
+          <div class="portfolio-card">
+            <div class="image-card">
+              <p class="card-title">350 x 200</p>
+            </div>
+            <div class="text-card">
+              <h5>Proyek 2</h5>
+              <p>Deskripsi proyek</p>
+            </div>
+          </div>
+          <div class="portfolio-card">
+            <div class="image-card">
+              <p class="card-title">350 x 200</p>
+            </div>
+            <div class="text-card">
+              <h5>Proyek 3</h5>
+              <p>Deskripsi proyek</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
