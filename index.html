@@ -3,118 +3,312 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Borel&family=Caveat+Brush&family=Dancing+Script:wght@400..700&family=Playwrite+HU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
     <title></title>
     <style>
-      .container {
-        border: 3px solid rgba(128, 128, 128, 0.4);
-        border-top: 3px solid black;
-        border-bottom: 3px solid black;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        padding: 0px 10px;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f5f7fa;
+        color: #333;
+        line-height: 1.6;
+      }
+
       .navbar {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: auto auto;
         align-items: center;
-        border-bottom: 2px solid black;
+        padding: 15px 40px;
+        background: white;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 0;
+        z-index: 100;
       }
+
+      .navbar h1 {
+        font-weight: 700;
+        color: #2d3e50;
+        font-size: 28px;
+      }
+
       .nav-button {
-        display: flex;
+        display: grid;
+        grid-auto-flow: column;
         gap: 20px;
+        justify-content: end;
       }
+
+      .nav-button a {
+        text-decoration: none;
+        color: #2d3e50;
+        font-weight: 600;
+        font-size: 16px;
+        position: relative;
+        padding: 6px 10px;
+        transition: all 0.3s ease;
+      }
+
+      .nav-button a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        background: #4f46e5;
+        left: 0;
+        bottom: -5px;
+        transition: width 0.3s ease;
+      }
+
+      .nav-button a:hover::after {
+        width: 100%;
+      }
+
+      .nav-button a:hover {
+        color: #4f46e5;
+      }
+
       .header {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 0px 20px 0px;
-        border-bottom: 2px solid black;
-      }
-      .foto-kanan {
-        width: 600px;
-        height: 400px;
-        background-color: lightgray;
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 60px 40px;
+        gap: 30px;
         align-items: center;
+        background: linear-gradient(135deg, #e0e7ff, #f5f7fa);
       }
-      .image-title {
-        font-size: 100px;
-        font-weight: bold;
-        color: rgba(128, 128, 128, 0.4);
+
+      .kiri h1 {
+        font-size: 32px;
+        color: #1e293b;
       }
+
+      .kiri p {
+        color: #64748b;
+        margin-top: 10px;
+        font-size: 16px;
+      }
+
+      .kiri button {
+        margin-top: 20px;
+        padding: 12px 22px;
+        background: #4f46e5;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+      }
+
+      .kiri button:hover {
+        background: #4338ca;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
+      }
+
+      .kanan {
+        background-image: url("images/WhatsApp Image 2025-02-22 at 16.39.19_54464b1f.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        height: 300px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      }
+
       .about-me {
-        padding: 10px 0px;
-        border-bottom: 2px solid black;
-        place-items: center;
+        display: grid;
+        grid-template-rows: auto auto;
+        align-items: center;
+        text-align: center;
+        padding: 60px 20px;
+        background: white;
       }
+
+      .about-me-title h1 {
+        font-size: 30px;
+        color: #1e293b;
+      }
+
+      .about-me-title p {
+        color: #64748b;
+        margin-top: 5px;
+      }
+
       .introduction {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        width: 100%;
-        margin: 0;
-        padding: 10px 0px;
-      }
-      .introduction-title {
-        background-color: lightgray;
-        padding: 10px;
-        text-align: center;
-        padding: 20px;
-      }
-      .portfolio {
-        padding: 10px 0px;
-        place-items: center;
-      }
-      .portfolio-menu {
-        display: flex;
         gap: 20px;
-        justify-content: center;
+        padding: 30px 20px;
       }
-      .portfolio-card {
-        width: 400px;
-        height: 300px;
-        border: 1px solid black;
-        display: flex;
-        flex-direction: column;
+
+      .introduction-title {
+        background: #f1f5f9;
+        padding: 20px;
+        border-radius: 12px;
+        font-weight: 600;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: default;
+      }
+
+      .introduction-title:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+      }
+
+      .portfolio {
+        display: grid;
+        grid-template-rows: auto auto;
         align-items: center;
-        justify-content: space-between;
-        padding: 15px 0px;
-      }
-      .image-card {
-        width: 350px;
-        height: 200px;
-        background-color: lightgray;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .text-card {
-        padding: 5px;
-      }
-      .text-card h5 {
-        margin: 0;
-        font-size: 18px;
         text-align: center;
+        padding: 60px 20px;
+        background: #f8fafc;
       }
-      .card-title {
-        font-size: 24px;
-        font-weight: bold;
-        color: rgba(128, 128, 128, 0.7);
+
+      .portfolio h1 {
+        font-size: 32px;
+        color: #1e293b;
       }
-      a {
-      text-decoration: none;
-      color: black;
+
+      .portfolio-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        gap: 30px;
+        padding: 30px;
       }
-      h1 {
-        font-size: 24px;
+
+      .portfolio-card {
+        display: grid;
+        grid-template-rows: auto auto;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        transition: all 0.3s ease;
+      }
+
+      .portfolio-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .pi-card-1,
+      .pi-card-2 {
+        background-image: url("images/WhatsApp\ Image\ 2025-08-17\ at\ 22.31.32_30413a96.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 90%;
+        height: 300px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        justify-self: center;
+        transition: transform 0.3s ease;
+      }
+
+      .pi-card-2 {
+        background-image: url("images/WhatsApp\ Image\ 2025-08-17\ at\ 22.56.53_21a14d57.jpg");
+      }
+
+      .pi-card-1:hover,
+      .pi-card-2:hover {
+        transform: scale(1.03);
+      }
+
+      .text-card {
+        margin-top: 20px;
+      }
+
+      .text-card h3 {
+        color: #1e293b;
+        font-size: 20px;
+      }
+
+      .text-card p {
+        color: #475569;
+        font-size: 15px;
+        margin-top: 10px;
+      }
+
+      .footer {
+        background: #1e293b;
+        color: white;
+        text-align: center;
+        padding: 15px 10px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 40px;
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+        position: relative;
+      }
+
+      .footer p {
+        margin: 0;
+        letter-spacing: 0.5px;
+      }
+
+      .footer p:hover {
+        color: #38bdf8;
+        cursor: default;
+      }
+
+      @media screen and (max-width: 900px) {
+        .portfolio-menu {
+          grid-template-columns: 1fr;
+        }
+
+        .introduction {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .header {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .navbar {
+          display: none;
+        }
+
+        .kanan {
+          height: 200px;
+        }
+
+        .introduction {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="navbar">
-        <p>Brand</p>
+        <h1 class="latin">Brand</h1>
         <div class="nav-button">
           <a href="#">Header</a>
           <a href="#">Biodata</a>
@@ -124,23 +318,21 @@
 
       <div class="header">
         <div class="kiri">
-          <h1 style="margin: 0;">Selamat Datang di Website Saya</h1>
+          <h1 style="margin: 0">Selamat Datang di Website Saya</h1>
           <p>
             Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks
             seperti ini
           </p>
           <button>Pelajari lebih lanjut</button>
         </div>
-        <div class="kanan">
-          <div class="foto-kanan">
-            <p class="image-title">600 x 400</p>
-          </div>
-        </div>
+        <div class="kanan"></div>
       </div>
 
       <div class="about-me">
-        <h1>About Me</h1>
-        <p>A brief introduction about myself</p>
+        <div class="about-me-title">
+          <h1>About Me</h1>
+          <p>A brief introduction about myself</p>
+        </div>
         <div class="introduction">
           <div class="introduction-title">Full Name</div>
           <div class="introduction-title">Education</div>
@@ -155,34 +347,31 @@
         <h1>Portfolio</h1>
         <div class="portfolio-menu">
           <div class="portfolio-card">
-            <div class="image-card">
-              <p class="card-title">350 x 200</p>
-            </div>
+            <div class="pi-card-1"></div>
             <div class="text-card">
-              <h5>Proyek 1</h5>
-              <p>Deskripsi proyek</p>
+              <h3>PADUKA (Pelayanan Adminduk Sukoharjo)</h3>
+              <p>
+                Dibangun dengan Laravel, Tailwind CSS, dan Node.js. Fitur
+                meliputi form dinamis, pelacakan status, dan manajemen pengguna.
+              </p>
             </div>
           </div>
           <div class="portfolio-card">
-            <div class="image-card">
-              <p class="card-title">350 x 200</p>
-            </div>
+            <div class="pi-card-2"></div>
             <div class="text-card">
-              <h5>Proyek 2</h5>
-              <p>Deskripsi proyek</p>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <div class="image-card">
-              <p class="card-title">350 x 200</p>
-            </div>
-            <div class="text-card">
-              <h5>Proyek 3</h5>
-              <p>Deskripsi proyek</p>
+              <h3>Solo Home Service</h3>
+              <p>
+                Dibangun dengan Laravel, Tailwind CSS, dan Next.js. Fitur
+                meliputi testimonial, katalog, dan pelacakan status layanan.
+              </p>
             </div>
           </div>
         </div>
       </div>
+
+      <footer class="footer">
+        <p>(C)2025 Yang copas mandul</p>
+      </footer>
     </div>
   </body>
 </html>
