@@ -1,0 +1,68 @@
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f7fa;
+}
+
+/* smooth scroll */
+
+html{
+scroll-behavior:smooth;
+}
+
+/* header image */
+
+.header-img{
+height:350px;
+background-image:url("../images/WhatsApp Image 2025-02-22 at 16.39.19_54464b1f.jpg");
+background-size:cover;
+background-position:center;
+border-radius:15px;
+}
+
+/* portfolio image */
+
+.portfolio-img{
+height:250px;
+background-size:cover;
+background-position:center;
+border-radius:10px;
+}
+
+/* project images */
+
+.portfolio1{
+background-image:url("../images/WhatsApp Image 2025-08-17 at 22.31.32_30413a96.jpg");
+}
+
+.portfolio2{
+background-image:url("../images/WhatsApp Image 2025-08-17 at 22.56.53_21a14d57.jpg");
+}
+
+/* hover cards */
+
+.project-card{
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* about card */
+
+.info-card{
+transition:0.3s;
+}
+
+.info-card:hover{
+background:#f1f5f9;
+transform:scale(1.05);
+}
+
+/* footer */
+
+footer{
+background:#1e293b;
+color:white;
+}
