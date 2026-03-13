@@ -66,3 +66,15 @@ footer{
 background:#1e293b;
 color:white;
 }
+
+.product-card{
+transition:0.3s;
+}
+
+.product-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+
+}
